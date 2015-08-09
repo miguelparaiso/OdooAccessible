@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <openerp>
-
     <data>
 
         <!-- BOOK -->
-        </record>
         <record model="ir.actions.act_window" id="book_list_action">
             <field name="name">Books</field>
             <field name="res_model">bookstore.book</field>

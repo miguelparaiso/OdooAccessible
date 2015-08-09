@@ -1,10 +1,7 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012 Thinkopen Solutions, Lda. All Rights Reserved
-#    http://www.thinkopensolutions.com.
-#    $Id$
+#    Copyright Eezee-It
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -20,3 +17,21 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+{
+    'name': 'Worldline SIPS Payment Acquiring  for online payments',
+    'version': '1.0',
+    'author': 'Eezee-It',
+    'category': 'Hidden',
+    'description': """
+Worldline SIPS Payment Acquirer for online payments
+
+Works with Worldline keys version 2.0, contains implementation of
+payments acquirer using Worldline SIPS.""",
+    'depends': ['payment'],
+    'data': [
+        'views/sips.xml',
+        'views/payment_acquirer.xml',
+        'data/sips.xml',
+    ],
+    'installable': True,
+}
