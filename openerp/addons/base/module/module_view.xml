@@ -163,9 +163,9 @@
                     <t t-name="kanban-box">
                       <div class="oe_module_vignette">
                         <t t-set="installed" t-value="record.state.raw_value == 'installed'"/>
-                        <img t-attf-src="#{record.icon.value}" class="oe_module_icon"/>
+                        <img t-attf-src="#{record.icon.value}" class="oe_module_icon" t-attf-alt="#{record.shortdesc.value} logo"/>
                         <div class="oe_module_desc">
-                          <h4><a type="open"><field name="shortdesc"/></a></h4>
+                          <h3><a type="open"><field name="shortdesc"/></a></h3>
                           <p class="oe_module_name">
                              <t t-if="record.summary.raw_value"><field name="summary"/><br/></t>
                              <i><field name="name" groups="base.group_no_one"/></i>

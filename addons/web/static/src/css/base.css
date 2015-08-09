@@ -871,15 +871,21 @@
   width: 220px;
   position: relative;
 }
-.openerp .oe_leftbar > div a.oe_logo {
-  display: table-row;
+.openerp .oe_leftbar > div h1 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.42857143;
+}
+.openerp .oe_leftbar > div h1 a.oe_logo {
+  display: block;
   text-align: center;
 }
-.openerp .oe_leftbar > div a.oe_logo img {
+.openerp .oe_leftbar > div h1 a.oe_logo img {
   margin: 14px 0;
   border: 0;
 }
-.openerp .oe_leftbar > div a.oe_logo .oe_logo_edit {
+.openerp .oe_leftbar > div h1 a.oe_logo .oe_logo_edit {
   margin: 14px 0;
   position: absolute;
   top: 1px;
@@ -894,7 +900,7 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-.openerp .oe_leftbar > div a.oe_logo:hover .oe_logo_edit_admin {
+.openerp .oe_leftbar > div h1 a.oe_logo:hover .oe_logo_edit_admin {
   display: block;
 }
 .openerp .oe_leftbar > div > div {
@@ -1573,17 +1579,19 @@
   font-size: 13px;
   padding-top: 3px;
 }
-.openerp .oe_searchview_drawer h4, .openerp .oe_searchview_drawer h4 * {
+.oe_searchview_drawer_span {
   margin: 0 0 0 2px;
   padding-left: 20px;
   cursor: pointer;
   font-weight: normal;
   display: inline-block;
+  color: #4c4c4c !important;
+  line-height: 1.1 !important;
 }
-.openerp .oe_searchview_drawer h4:hover, .openerp .oe_searchview_drawer h4 *:hover {
+.oe_searchview_drawer_span:hover {
   background-color: #f0f0fa;
 }
-.openerp .oe_searchview_drawer h4:before {
+.oe_searchview_drawer_span:before {
   content: "▸ ";
   color: #a3a3a3;
 }
@@ -1698,7 +1706,7 @@
   opacity: 0.5;
   margin-left: -14px;
 }
-.openerp .oe_searchview_drawer .oe_opened h4:before {
+.oe_opened .oe_searchview_drawer_span:before {
   content: "▾ ";
   position: relative;
   top: -1px;

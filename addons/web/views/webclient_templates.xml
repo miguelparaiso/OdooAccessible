@@ -119,7 +119,7 @@
         </template>
 
         <template id="web.layout" name="Web layout">&lt;!DOCTYPE html&gt;
-            <html style="height: 100%">
+            <html style="height: 100%" lang="es">
                 <head>
                     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
                     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -149,10 +149,12 @@
             <ul class="nav navbar-nav navbar-right oe_systray" style="display: none;"/>
         </template>
         <template id="web.menu_secondary">
-            <a class="oe_logo" t-att-href="'/web/?debug' if debug else '/web'">
-                <span class="oe_logo_edit">Edit Company data</span>
-                <img src='/web/binary/company_logo'/>
-            </a>
+            <h1>
+               <a class="oe_logo" t-att-href="'/web/?debug' if debug else '/web'">
+                    <span class="oe_logo_edit">Edit Company data</span>
+                    <img src='/web/binary/company_logo' alt="Company logo"/>
+               </a>
+            </h1>
             <div>
                 <div>
                     <div class="oe_secondary_menus_container">
@@ -218,6 +220,7 @@
                 <nav id="oe_main_menu_navbar" class="navbar navbar-inverse" role="navigation" groups="base.group_user,base.group_portal">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>

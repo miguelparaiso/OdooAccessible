@@ -360,7 +360,7 @@
 <t t-name="UserMenu">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img class="oe_topbar_avatar" t-att-data-default-src="_s + '/web/static/src/img/user_menu_avatar.png'"/>
+                <img class="oe_topbar_avatar" t-att-data-default-src="_s + '/web/static/src/img/user_menu_avatar.png'" t-attf-alt="User avatar"/>
                 <span class="oe_topbar_name"/> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -1740,9 +1740,12 @@
 </div>
 
  <div t-name="SearchView.SaveFilter" class="oe_searchview_savefilter">
-    <h4>Save current filter</h4>
+    <dt class="oe_searchview_drawer_span">Save current filter</dt>
     <form class="oe_form">
-        <p class="oe_form_required"><input id="oe_searchview_custom_input" placeholder="Filter name"/></p>
+        <p class="oe_form_required">
+            <label for="oe_searchview_custom_input">Filter name</label>
+            <input id="oe_searchview_custom_input" placeholder="Filter name"/>
+        </p>
         <p>
             <input id="oe_searchview_custom_public" type="checkbox"/>
             <label for="oe_searchview_custom_public">Share with all users</label>
@@ -1754,7 +1757,7 @@
 </div>
 
 <div t-name="SearchView.advanced" class="oe_searchview_advanced">
-    <h4>Advanced Search</h4>
+    <dt class="oe_searchview_drawer_span">Advanced Search</dt>
     <form>
         <ul>
 
@@ -1766,7 +1769,8 @@
 <t t-name="SearchView.extended_search.proposition">
     <li>
         <span class="searchview_extended_prop_or">or</span>
-        <select class="searchview_extended_prop_field">
+        <label for="filter_field"  class="sr-only">Field of the filter</label>
+        <select class="searchview_extended_prop_field" id="filter_field">
             <t t-foreach="widget.attrs.fields" t-as="field">
                 <option t-att="{'selected': field === widget.attrs.selected ? 'selected' : null}"
                         t-att-value="field.name">
@@ -1774,22 +1778,26 @@
                 </option>
             </t>
         </select>
-        <select class="searchview_extended_prop_op"/>
+        <label for="filter_operator" class="sr-only">Operator of the filter</label>
+        <select class="searchview_extended_prop_op" id="filter_operator"/>
         <span class="searchview_extended_prop_value"/>
         <a class="searchview_extended_delete_prop button">x</a>
     </li>
 </t>
 <t t-name="SearchView.extended_search.proposition.char">
-    <input class="field_char"/>
+    <label for="filter_value" class="sr-only">Value of the filter</label>
+    <input class="field_char" id="filter_value"/>
 </t>
 <t t-name="SearchView.extended_search.proposition.empty">
     <span/>
 </t>
 <t t-name="SearchView.extended_search.proposition.integer">
-    <input type="number" class="field_integer" value = "0" step="1"/>
+    <label for="filter_value" class="sr-only">Value of the filter</label>
+    <input type="number" class="field_integer" id="filter_value" value = "0" step="1"/>
 </t>
 <t t-name="SearchView.extended_search.proposition.float">
-    <input class="field_float"
+    <label for="filter_value" class="sr-only">Value of the filter</label>
+    <input class="field_float" id="filter_value"
         t-att-type="widget.decimal_point === '.' ? 'number' : 'text'"
         t-attf-title="Number using #{widget.decimal_point  || '.' } as decimal separator."
         t-attf-pattern="[0-9]+([\\#{widget.decimal_point || '.' }][0-9]+)?"

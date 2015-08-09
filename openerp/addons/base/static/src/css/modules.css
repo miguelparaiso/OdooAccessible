@@ -16,12 +16,12 @@
     padding: 0px 5px;
 }
 
-.oe_module_desc h4 {
+.oe_module_desc h3 {
     margin: 0;
     font-size: 13px;
 }
 
-.oe_module_desc h4 a {
+.oe_module_desc h3 a {
     color: #4c4c4c;
 }
 

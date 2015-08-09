@@ -1882,7 +1882,7 @@ instance.web.search.SaveFilter = instance.web.search.Input.extend({
         this.$el.on('click', 'input[type=checkbox]', function() {
             $(this).siblings('input[type=checkbox]').prop('checked', false);
         });
-        this.$el.on('click', 'h4', function () {
+        this.$el.on('click', 'dt', function () {
             self.$el.toggleClass('oe_opened');
         });
     },
@@ -1976,7 +1976,7 @@ instance.web.search.Advanced = instance.web.search.Input.extend({
         var self = this;
         this.$el
             .on('keypress keydown keyup', function (e) { e.stopPropagation(); })
-            .on('click', 'h4', function () {
+            .on('click', 'dt', function () {
                 self.$el.toggleClass('oe_opened');
             }).on('click', 'button.oe_add_condition', function () {
                 self.append_proposition();
